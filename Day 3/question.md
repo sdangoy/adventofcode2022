@@ -10,11 +10,11 @@ The list of items for each rucksack is given as characters all on a single line.
 
 For example, suppose you have the following list of contents from six rucksacks:
 
-`vJrwpWtwJgWrhcsFMMfFFhFp`
-`jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL`
-`PmmdzqPrVvPwwTWBwg`
-`wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn`
-`ttgJtRGJQctTZtZT`
+`vJrwpWtwJgWrhcsFMMfFFhFp` <br>
+`jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL` <br>
+`PmmdzqPrVvPwwTWBwg` <br>
+`wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn` <br>
+`ttgJtRGJQctTZtZT` <br>
 `CrZsJsPPZsGzwwsLwLmpwMDw`
 
 - The first rucksack contains the items <code>vJrwpWtwJgWrhcsFMMfFFhFp</code>, which means its first compartment contains the items <code>vJrwpWtwJgWr</code>, while the second compartment contains the items <code>hcsFMMfFFhFp</code>. The only item type that appears in both compartments is lowercase **<code>p</code>**.
