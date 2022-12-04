@@ -1,5 +1,4 @@
 const {readFileSync, promises: fsPromises} = require('fs');
-const { serialize } = require('v8');
 
 function syncReadFile(filename) {
     const contents = readFileSync(filename, 'utf-8');
