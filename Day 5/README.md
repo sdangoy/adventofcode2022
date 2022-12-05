@@ -10,10 +10,9 @@ Q1. How many lines of code ("rows") in the input described the grid's layout? In
 
 Q2. How many columns were in the grid? In other words, how WIDE was the input grid?
 
-
 **-- Solving Q1 --**
 
-To determine the depth of the grid, the code needs to sort out where the description of the grid ends and where the move directions started. This was easily solved by traversing each line from the top(keeping count of how many lines have been traversed with a counter, `i`) until **the line before the empty line** that seperated the grid information from the directions. The last line of grid information can be ignored since it only contains the column labels used for visual clarity and does not count as part of the actual grid. The remaining number of lines traversed indicates the depth of the grid (`depth = i - 1`).
+To determine the depth of the grid, the code needs to sort out where the description of the grid ends and where the move directions started. This was easily solved by traversing each line from the top (keeping count of how many lines have been traversed with a counter, `i`) until **the line before the empty line** that seperated the grid information from the directions. The last line of grid information can be ignored since it only contains the column labels used for visual clarity and does not count as part of the actual grid. The remaining number of lines traversed indicates the depth of the grid (`depth = i - 1`).
 
 
 **-- Solving Q2 --**
@@ -23,7 +22,7 @@ To determine the width of the grid, the code takes the line that contains the co
 
 **-- Solving the question: "How to store the column stack?" --**
 
-The code must have have a way to optimally store a column's stack, perferably in a way that can still utilize stack properties for future operations. A `Map` object was selected because of its fast `.set()` and `.get()` functions (`Runtime: O(1)`). The keys are the columns (`type: number`) and the values are the crates in the column (`type: string`). The value being of type `string` allows for an easy transition to arrays using `.split()`. We can use an array's fast `.pop()` and `.push()` functions (`Runtime: O(1)`) to easily solve the first part. Strings are also easy to manipulate with `.slice()` and the `+ operator` which can be taken advantage of to solve the second part.
+The code must have a way to optimally store a column's stack, perferably in a way that can still utilize stack properties for future operations. A `Map` object was selected because of its fast `.set()` and `.get()` functions (`Runtime: O(1)`). The keys are the columns (`type: number`) and the values are the crates in the column (`type: string`). The value being of type `string` allows for an easy transition to arrays using `.split()`. We can use an array's fast `.pop()` and `.push()` functions (`Runtime: O(1)`) to easily solve the first part. Strings are also easy to manipulate with `.slice()` and the `+ operator` which can be taken advantage of to solve the second part.
 
 When initalizing the column map, crates are inputted into the value string from **bottom to top**. For each "row" of the grid, a crate in the column will be indicated as `[#]`. There is exactly 4 characters between crate labels from separate columns (`i = i + 4`). Because of the opening '[' bracket, we start at line[1] (`i = 1`).
 
