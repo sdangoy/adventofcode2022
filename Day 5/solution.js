@@ -1,4 +1,5 @@
 const {readFileSync, promises: fsPromises} = require('fs');
+const { start } = require('repl');
 
 function syncReadFile(filename) {
     const contents = readFileSync(filename, 'utf-8');
@@ -116,3 +117,43 @@ function getTopCratesFromColumns(grid, numberOfColumns) {
 }
 
 console.log(`Q1: The crates that end up on top of each stack is: ` + solutionOne(inputArray) + `.`);
+
+
+
+function solutionTwo(data) {
+    let gridLines = findEndOfGridData(data);
+    let numberOfColumns = findNumberOfGridColumns(data, gridLines);
+    let gridMap = initalizeGrid(data, gridLines, numberOfColumns);
+
+    let directionStartLine = gridLines + 2; // +2 to start on first line of directions.
+
+    for (let i = directionStartLine; i < data.length; i++) {
+        let values = getValuesFromDirections(data[i]);
+
+        // Assuming the format of directions is always: "move [0] from [1] to [2]."
+        let numberToMove = parseInt(values[0]); 
+        let removeFromColumn = parseInt(values[1]);
+        let movedToColumn = parseInt(values[2]);
+
+        updateMoveCrates(gridMap, numberToMove, removeFromColumn, movedToColumn);
+    }
+
+    return getTopCratesFromColumns(gridMap, numberOfColumns);
+}
+
+function updateMoveCrates(grid, crateNumber, removeColumn, addColumn) {
+    let removeColumnString = grid.get(removeColumn);
+    let addColumnString = grid.get(addColumn);
+
+    let startIndex = removeColumnString.length - crateNumber; // Get index of first crate to remove in string.
+
+    let updatedRemoveColumn = removeColumnString.slice(0, startIndex);
+    let updatedAddColumn = addColumnString + removeColumnString.slice(startIndex);
+
+    grid.set(removeColumn, updatedRemoveColumn);
+    grid.set(addColumn, updatedAddColumn);
+
+    return grid;
+}
+
+console.log(`Q2: After the new rearrangement procedures, the crates that end up on top of each stack is: ` + solutionTwo(inputArray) + `.`);
