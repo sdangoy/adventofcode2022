@@ -41,9 +41,9 @@ function findEndOfGridData(data) { // Used to determine what lines in input file
 }
 
 function findNumberOfGridColumns(data, gridLines) { // Used to determine number of columns in the input grid.
-    let lastColumn = data[gridLines].length - 2; // -2 due to a whitespace character after the last column.
-
-    return (data[gridLines][lastColumn]);
+    let columnArray = data[gridLines].split(' ').filter(element => element); // .filter() removes whitespace from array.
+    
+    return parseInt(columnArray[columnArray.length - 1]);
 }
 
 function initalizeGrid(data, gridLines, numberOfColumns) {
