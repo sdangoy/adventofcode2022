@@ -8,50 +8,68 @@ The Elves don't want to interrupt the crane operator during this delicate proced
 
 They do, however, have a drawing of the starting stacks of crates **and** the rearrangement procedure (your puzzle input). For example:
 
-`    [D]    ` <br>
-`[N] [C]    ` <br>
-`[Z] [M] [P]` <br>
-` 1   2   3 ` <br>
+<pre>
+<code>
+    [D]     
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3
 
-`move 1 from 2 to 1` <br>
-`move 3 from 1 to 3` <br>
-`move 2 from 2 to 1` <br>
-`move 1 from 1 to 2`
+move 1 from 2 to 1
+move 3 from 1 to 3
+move 2 from 2 to 1
+move 1 from 1 to 2
+</code>
+</pre>
 
 In this example, there are three stacks of crates. Stack 1 contains two crates: crate `Z` is on the bottom, and crate `N` is on top. Stack 2 contains three crates; from bottom to top, they are crates `M`, `C`, and `D`. Finally, stack 3 contains a single crate, `P`.
 
 Then, the rearrangement procedure is given. In each step of the procedure, a quantity of crates is moved from one stack to a different stack. In the first step of the above rearrangement procedure, one crate is moved from stack 2 to stack 1, resulting in this configuration:
 
-`[D]`         <br>
-`[N] [C]  `   <br>
-`[Z] [M] [P]` <br>
-` 1   2   3 `
+<pre>
+<code>
+[D]
+[N] [C]  
+[Z] [M] [P]
+ 1   2   3
+ </code>
+ </pre>
 
 In the second step, three crates are moved from stack 1 to stack 3. Crates are moved **one at a time**, so the first crate to be moved (`D`) ends up below the second and third crates:
 
 <pre>
+<code>
         [Z]
         [N]
     [C] [D]
     [M] [P]
- 1   2   3
+ 1   2   3
+ </code>
  </pre>
 
 Then, both crates are moved from stack 2 to stack 1. Again, because crates are moved **one at a time**, crate `C` ends up below crate `M`:
 
-`        [Z]` <br>
-`        [N]` <br>
-`[M]     [D]` <br>
-`[C]     [P]` <br>
-` 1   2   3 `
+<pre>
+<code>
+        [Z]
+        [N]
+[M]     [D]
+[C]     [P]
+ 1   2   3
+ </code>
+ </pre>
 
 Finally, one crate is moved from stack 1 to stack 2:
 
-`        [Z]` <br>
-`        [N]` <br>
-`        [D]` <br>
-`[C] [M] [P]` <br>
-` 1   2   3 `
+<pre>
+<code>
+        [Z]
+        [N]
+        [D]
+[C] [M] [P]
+ 1   2   3 
+ </code>
+ </pre>
 
 The Elves just need to know **which crate will end up on top of each stack**; in this example, the top crates are `C` in stack 1, `M` in stack 2, and `Z` in stack 3, so you should combine these together and give the Elves the message **`CMZ`**.
 
