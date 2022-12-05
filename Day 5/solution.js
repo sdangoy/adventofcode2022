@@ -50,7 +50,7 @@ function initalizeGrid(data, gridLines, numberOfColumns) {
     let gridMap = new Map();
 
     for (let i = 1; i <= numberOfColumns; i++) {
-        gridMap.set(i, ''); // Key type is Int; Value type is String.
+        gridMap.set(i, ''); // Key type is integer; Value type is string.
     }
 
     return fillInGrid(data, gridLines, gridMap);
