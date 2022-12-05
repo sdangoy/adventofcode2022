@@ -29,11 +29,13 @@ Then, the rearrangement procedure is given. In each step of the procedure, a qua
 
 In the second step, three crates are moved from stack 1 to stack 3. Crates are moved **one at a time**, so the first crate to be moved (`D`) ends up below the second and third crates:
 
-`        [Z]` <br>
-`        [N]` <br>
-`    [C] [D]` <br>
-`    [M] [P]` <br>
-` 1   2   3`
+<pre>
+        [Z]
+        [N]
+    [C] [D]
+    [M] [P]
+ 1   2   3
+ </pre>
 
 Then, both crates are moved from stack 2 to stack 1. Again, because crates are moved **one at a time**, crate `C` ends up below crate `M`:
 
