@@ -33,7 +33,7 @@ In the second step, three crates are moved from stack 1 to stack 3. Crates are m
 `        [N]` <br>
 `    [C] [D]` <br>
 `    [M] [P]` <br>
-` 1 &nbsp; 2   3 `
+<pre>`1   2   3`</pre>
 
 Then, both crates are moved from stack 2 to stack 1. Again, because crates are moved **one at a time**, crate `C` ends up below crate `M`:
 
