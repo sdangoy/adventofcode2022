@@ -9,7 +9,6 @@ The Elves don't want to interrupt the crane operator during this delicate proced
 They do, however, have a drawing of the starting stacks of crates **and** the rearrangement procedure (your puzzle input). For example:
 
 <pre>
-<code>
     [D]     
 [N] [C]    
 [Z] [M] [P]
@@ -19,7 +18,6 @@ move 1 from 2 to 1
 move 3 from 1 to 3
 move 2 from 2 to 1
 move 1 from 1 to 2
-</code>
 </pre>
 
 In this example, there are three stacks of crates. Stack 1 contains two crates: crate `Z` is on the bottom, and crate `N` is on top. Stack 2 contains three crates; from bottom to top, they are crates `M`, `C`, and `D`. Finally, stack 3 contains a single crate, `P`.
