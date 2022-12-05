@@ -54,13 +54,79 @@ Then, both crates are moved from stack 2 to stack 1. Again, because crates are m
 Finally, one crate is moved from stack 1 to stack 2:
 
 <pre>
-        [Z]
+        [<b>Z</b>]
         [N]
         [D]
-[C] [M] [P]
+[<b>C</b>] [<b>M</b>] [P]
  1   2   3
 </pre>
 
 The Elves just need to know **which crate will end up on top of each stack**; in this example, the top crates are `C` in stack 1, `M` in stack 2, and `Z` in stack 3, so you should combine these together and give the Elves the message **`CMZ`**.
 
 **After the rearrangement procedure completes, what crate ends up on top of each stack?**
+
+Your puzzle answer was `QGTHFZBHV`.
+
+**--- Part Two ---**
+
+As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.
+
+Some mud was covering the writing on the side of the crane, and you quickly wipe it away. The crane isn't a CrateMover 9000 - it's a **CrateMover 9001**.
+
+The CrateMover 9001 is notable for many new and exciting features: air conditioning, leather seats, an extra cup holder, and **the ability to pick up and move multiple crates at once**.
+
+Again considering the example above, the crates begin in the same configuration:
+
+<pre>
+    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+</pre>
+
+Moving a single crate from stack 2 to stack 1 behaves the same as before:
+
+<pre>
+[D]        
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+</pre>
+
+However, the action of moving three crates from stack 1 to stack 3 means that those three moved crates **stay in the same order**, resulting in this new configuration:
+
+<pre>
+        [D]
+        [N]
+    [C] [Z]
+    [M] [P]
+ 1   2   3 
+</pre>
+
+Next, as both crates are moved from stack 2 to stack 1, they **retain their order** as well:
+
+<pre>
+        [D]
+        [N]
+[C]     [Z]
+[M]     [P]
+ 1   2   3 
+</pre>
+
+Finally, a single crate is still moved from stack 1 to stack 2, but now it's crate `C` that gets moved:
+
+<pre>
+        [<b>D</b>]
+        [N]
+        [Z]
+[<b>M</b>] [<b>C</b>] [P]
+ 1   2   3 
+</pre>
+
+In this example, the CrateMover 9001 has put the crates in a totally different order: **`MCD`**.
+
+Before the rearrangement process finishes, update your simulation so that the Elves know where they should stand to be ready to unload the final supplies. **After the rearrangement procedure completes, what crate ends up on top of each stack?**
+
+Your puzzle answer was `MGDMPSZTM`.
+
+Both parts of this puzzle are complete! They provide two gold stars: **
