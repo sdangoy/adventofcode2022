@@ -25,48 +25,40 @@ In this example, there are three stacks of crates. Stack 1 contains two crates: 
 Then, the rearrangement procedure is given. In each step of the procedure, a quantity of crates is moved from one stack to a different stack. In the first step of the above rearrangement procedure, one crate is moved from stack 2 to stack 1, resulting in this configuration:
 
 <pre>
-<code>
 [D]
 [N] [C]  
 [Z] [M] [P]
  1   2   3
- </code>
  </pre>
 
 In the second step, three crates are moved from stack 1 to stack 3. Crates are moved **one at a time**, so the first crate to be moved (`D`) ends up below the second and third crates:
 
 <pre>
-<code>
         [Z]
         [N]
     [C] [D]
     [M] [P]
  1   2   3
- </code>
  </pre>
 
 Then, both crates are moved from stack 2 to stack 1. Again, because crates are moved **one at a time**, crate `C` ends up below crate `M`:
 
 <pre>
-<code>
         [Z]
         [N]
 [M]     [D]
 [C]     [P]
  1   2   3
- </code>
  </pre>
 
 Finally, one crate is moved from stack 1 to stack 2:
 
 <pre>
-<code>
         [Z]
         [N]
         [D]
 [C] [M] [P]
  1   2   3 
- </code>
  </pre>
 
 The Elves just need to know **which crate will end up on top of each stack**; in this example, the top crates are `C` in stack 1, `M` in stack 2, and `Z` in stack 3, so you should combine these together and give the Elves the message **`CMZ`**.
