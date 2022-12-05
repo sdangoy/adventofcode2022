@@ -59,7 +59,7 @@ Finally, one crate is moved from stack 1 to stack 2:
         [D]
 [C] [M] [P]
  1   2   3
- </pre>
+</pre>
 
 The Elves just need to know **which crate will end up on top of each stack**; in this example, the top crates are `C` in stack 1, `M` in stack 2, and `Z` in stack 3, so you should combine these together and give the Elves the message **`CMZ`**.
 
