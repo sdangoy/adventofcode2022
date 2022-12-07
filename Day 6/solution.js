@@ -5,7 +5,7 @@ function syncReadFile(filename) {
     return contents;
 }
 
-const inputArray = syncReadFile('./Day 6/input.txt');
+const inputArray = syncReadFile('../Day 6/input.txt');
 
 function solutionOne(data) {
     let startWindow = 0;
@@ -23,7 +23,7 @@ function solutionOne(data) {
 
         uniqueLetters.clear();
 
-        // Instead of going one letter at a time, can be implemented to skip multiple indices.
+        // Shift window to the right by one letter. Can be better implemented (see updated-solution.js).
         startWindow++; 
         endWindow++;
     }
@@ -32,10 +32,8 @@ function solutionOne(data) {
 }
 
 function checkWindow(window, uniqueLetters, numberOfChars) {
-    let windowArray = window.split('');
-
-    for (let i = 0; i < windowArray.length; i++) {
-        uniqueLetters.add(windowArray[i]); // Due to Set property, if value already exists, nothing is inserted.
+    for (let i = 0; i < window.length; i++) {
+        uniqueLetters.add(window[i]); // Due to Set property, if value already exists, nothing is inserted.
     }
 
     if (uniqueLetters.size < numberOfChars) { // When the number of characters needed for a valid marker is equal to set size, then all letters are unique.
