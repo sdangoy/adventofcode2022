@@ -5,7 +5,7 @@ function syncReadFile(filename) {
     return contents;
 }
 
-const inputArray = syncReadFile('../Day 6/input.txt');
+const inputArray = syncReadFile('./Day 6/input.txt');
 
 function solutionOne(data) {
     let startWindow = 0;
