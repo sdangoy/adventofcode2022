@@ -108,7 +108,7 @@ Situation 1 - Moving one letter to the right of the SECOND instance of the repea
 Although it would move the window more quickly into the right position, doing so may lead to missing out on the correct window, as the last repeated character may need to be the first letter in the window.
 
 Ex:
-|tbet|aqva...   --->   tbet|aqva|...   --->   ...algorithm missed the correct |taqv| window
+|tbet|aqva...   --->   tbet|aqva|...   --->   ...algorithm missed the correct |beta| window
 
 
 Situation 2 - Moving to the SECOND instance of the repeated letter
